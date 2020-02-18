@@ -1,3 +1,4 @@
+from kk import routes
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
@@ -11,7 +12,9 @@ dotenv_path = os.path.join(APP_ROOT, '.env')
 load_dotenv(dotenv_path)
 
 app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+app.config['DEBUG'] = os.getenv('DEBUG')
+app.config['PORT'] = os.getenv('PORT')
 app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=465,
@@ -24,5 +27,3 @@ app.config.update(
 
 db = SQLAlchemy(app)
 mail = Mail(app)
-
-from kk import routes
