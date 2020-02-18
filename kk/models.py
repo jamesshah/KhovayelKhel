@@ -13,5 +13,13 @@ class User(db.Model):
     sem = db.Column(db.String, nullable=False)
     branch = db.Column(db.String, nullable=False)
 
+    def __init__(self, name, email, mobile, en_num, sem, branch):
+        self.name = name
+        self.branch = branch
+        self.email = email
+        self.en_num = en_num
+        self.mobile = mobile
+        self.sem = sem
+
     def __repr__(self):
         return f"User('{self.id}','{self.name}', '{self.mobile}' , '{self.email}','{self.en_num}','{self.sem}','{self.branch}')"
