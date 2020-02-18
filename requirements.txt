@@ -1,3 +1,4 @@
+alembic==1.4.0
 astroid==2.3.1
 autopep8==1.5
 bcrypt==3.1.7
@@ -9,6 +10,8 @@ Click==7.0
 Flask==1.1.1
 Flask-Bcrypt==0.7.1
 Flask-Mail==0.9.1
+Flask-Migrate==2.5.2
+Flask-Script==2.0.6
 Flask-SQLAlchemy==2.4.1
 Flask-WTF==0.14.2
 gunicorn==20.0.4
@@ -17,6 +20,7 @@ isort==4.3.21
 itsdangerous==1.1.0
 Jinja2==2.10.3
 lazy-object-proxy==1.4.2
+Mako==1.1.1
 MarkupSafe==1.1.1
 mccabe==0.6.1
 psycopg2==2.8.4
@@ -24,7 +28,9 @@ pycodestyle==2.5.0
 pycparser==2.19
 PyJWT==1.7.1
 pylint==2.4.2
+python-dateutil==2.8.1
 python-dotenv==0.11.0
+python-editor==1.0.4
 pytz==2019.3
 requests==2.22.0
 six==1.12.0
