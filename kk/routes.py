@@ -1,5 +1,5 @@
 from flask import render_template, url_for, flash, redirect, request
-from kk import app, models, db, mail
+from kk import app, db, mail
 from kk.registration import RegistrationForm
 from kk.models import User
 from flask_mail import Message
