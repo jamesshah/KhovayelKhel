@@ -1,0 +1,63 @@
+{% extends "base.html" %} {% block content%}
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div
+        class="col-lg-6 order-lg-2 text-white showcase-img"
+        style=" background-image: url({{ url_for('static',filename='img/g3.JPG') }}); 
+        min-height:18rem;"
+      ></div>
+      <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+        <h2>Pitthu</h2>
+        <p class="lead mb-0">
+          Team of 5<br />Known as Satoliya<br />Come with Your Team, No
+          materials from your will required<br />Co-ordinators' decision will be
+          final.
+        </p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div
+        class="col-lg-6 text-white showcase-img"
+        style=" background-image: url({{ url_for('static',filename='img/g2.JPG') }});"
+      ></div>
+      <div class="col-lg-6 my-auto showcase-text">
+        <h2>Khovayel Khel Special</h2>
+        <p class="lead mb-0">
+          A Surprise Game For All Of You <br />Team of 3<br />Keep Guessing!!
+          <br />Co-ordinators' decision will be final.
+        </p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div
+        class="col-lg-6 order-lg-2 text-white showcase-img"
+        style=" background-image: url({{ url_for('static',filename='img/g1.JPG') }});"
+      ></div>
+      <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+        <h2>Rumal Khech</h2>
+        <p class="lead mb-0">
+          Team of 5<br />Known as Dog and the Bone<br />The team who gets
+          maximum points will be winner<br />Co-ordinators' decision will be
+          final.
+        </p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div
+        class="col-lg-6 text-white showcase-img"
+        style=" background-image: url({{ url_for('static',filename='img/g4.jpg') }});"
+      ></div>
+      <div class="col-lg-6 my-auto showcase-text">
+        <h2>Pagathiya</h2>
+        <p class="lead mb-0">
+          Also Known as Steps <br />
+          An Induvidual Game<br />
+          Let's see how well you do langdi and complete all the blocks <br />
+          Co-ordinators' decision will be final.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content%}

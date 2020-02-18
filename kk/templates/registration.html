@@ -1,0 +1,74 @@
+{% extends "base.html"%} {%block content%}
+<div class="content-section">
+  <form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group text-center">
+      <legend class="border-bottom mb-4 w-25">
+        Participate Now!!
+      </legend>
+      <div class="form-group text-center w-25">
+        {{ form.name.label(class="form-control-label text-center")}} {% if form.name.errors
+        %} {{ form.name(class="form-control is-invalid")}}
+        <div class="invalid-feedback">
+          {% for error in form.name.errors%}
+          <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %} {{ form.name(class="form-control text-center")}} {% endif %}
+      </div>
+      <div class="form-group text-center w-25">
+        {{ form.email.label(class="form-control-label")}} {% if
+        form.email.errors %} {{ form.email(class="form-control is-invalid")}}
+        <div class="invalid-feedback">
+          {% for error in form.email.errors%}
+          <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %} {{ form.email(class="form-control text-center")}} {% endif %}
+      </div>
+      <div class="form-group text-center w-25">
+        {{ form.mobile.label(class="form-control-label")}} {% if
+        form.mobile.errors %} {{ form.mobile(class="form-control is-invalid")}}
+        <div class="invalid-feedback">
+          {% for error in form.mobile.errors%}
+          <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %} {{ form.mobile(class="form-control text-center")}} {% endif
+        %}
+      </div>
+      <div class="form-group text-center w-25">
+        {{ form.en_num.label(class="form-control-label")}}
+        {% if form.en_num.errors %} {{ form.en_num(class="form-control is-invalid")}}
+        <div class="invalid-feedback">
+          {% for error in form.en_num.errors%}
+          <span>{{ error }}</span>
+          {% endfor %}         
+        {% else %} {{ form.en_num(class="form-control text-center", onchange = "form_validate_enroll()")}} {% endif %}
+      </div>
+
+      <div class="form-group" align="center">
+        {{ form.submit(class="btn btn-primary")}}
+      </div>
+    </fieldset>
+  </form>
+</div>
+{% endblock content %}
+
+{% block script %}
+<script>
+function form_validate_enroll() {
+             var enroll = document.getElementById('s_enroll').value;             
+            if (/[^a-zA-Z0-9\-\/]/.test(enroll)) {
+                alert("Special Characters are Not Allowed in Enrollment Number!");
+                return false;
+            }
+            if (isNaN(enroll)) {
+                alert("Please enter Proper Enrollment number!");
+                return false;
+            }            
+        }
+
+</script>
+
+{% endblock script %}
