@@ -1,5 +1,8 @@
-#ignore virtual environment directory
+# Ignore virtual environment directory
 kk_venv/
+
+# Ignore local database file
+kk/site.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
