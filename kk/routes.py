@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect, request
 from kk import app, db, mail
 from kk.registration import RegistrationForm
-from kk.models import User
+from kk.models import participants
 from flask_mail import Message
 
 mail_id = ""
@@ -38,8 +38,8 @@ def home():
         else:
             s_sem = (20 - year + 1) * 2
 
-        newuser = User(name=form.name.data, email=form.email.data,
-                       mobile=form.mobile.data, en_num=form.en_num.data, sem=s_sem, branch=s_dept)
+        newuser = participants(name=form.name.data, email=form.email.data,
+                               mobile=form.mobile.data, en_num=form.en_num.data, sem=s_sem, branch=s_dept)
 
         db.session.add(newuser)
         db.session.commit()
@@ -72,16 +72,6 @@ def games():
 @app.route('/contact')
 def contact():
     return render_template('contact.html', title="Contact")
-
-
-@app.route('/dashboard')
-def dashboard():
-    count = 0
-    users = User.query.all()
-    for user in users:
-        print(user.email)
-
-    return render_template('dashboard.html', title="Dashboard")
 
 
 '''@app.route('/registration', methods=['GET', 'POST'])

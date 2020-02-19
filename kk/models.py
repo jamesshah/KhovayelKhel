@@ -1,9 +1,9 @@
 from kk import db
 
 
-class User(db.Model):
+class participants(db.Model):
 
-    __tablename__ = "User"
+    __tablename__ = "participants"
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
@@ -21,5 +21,5 @@ class User(db.Model):
         self.mobile = mobile
         self.sem = sem
 
-    # def __repr__(self):
-    #     return f"User('{self.id}','{self.name}', '{self.mobile}' , '{self.email}','{self.en_num}','{self.sem}','{self.branch}')"
+    def __repr__(self):
+        return f"participants('{self.id}','{self.name}', '{self.mobile}' , '{self.email}','{self.en_num}','{self.sem}','{self.branch}')"

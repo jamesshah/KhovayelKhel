@@ -25,5 +25,4 @@ app.config.update(
 db = SQLAlchemy(app)
 mail = Mail(app)
 
-
 from kk import routes
