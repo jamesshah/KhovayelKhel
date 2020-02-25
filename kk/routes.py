@@ -74,6 +74,27 @@ def contact():
     return render_template('contact.html', title="Contact")
 
 
+# @app.route('/dashboard')
+# def dashboard():
+#     return render_template('dashboard.html', title="Dashboard", data=participants.query.all())
+
+
+# @app.route('/dashboard/pagathiya', methods=['GET', 'POST'])
+# def pagathiya():
+
+#     if request.method == 'POST':
+#         name = request.form['name']
+#         all_players = participants.query.all()
+#         all_pagathiya = pagathiya.query.all()
+
+#         for player in all_players:
+#             if player.name == name:
+#                 db.session.add(pagathiya(name=name))
+#                 db.session.commit()
+
+#     return render_template('pagathiya.html', title="Pagathiya Dashboard", data=pagathiya.query.all())
+
+
 '''@app.route('/registration', methods=['GET', 'POST'])
 def registration():
     form = RegistrationForm()

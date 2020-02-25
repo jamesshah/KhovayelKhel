@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block style %}
+{% extends "base.html" %}{% block style %}
 
 <style>
   .footer {
@@ -10,7 +10,27 @@
 
 {% endblock style %} {% block content %}
 
-<h3 style="text-align: center;">Total Participants</h3>
+<form class="form-control" , action="POST">
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+      <label class="sr-only" for="inlineFormInput">Name</label>
+      <input
+        type="text"
+        class="form-control mb-2"
+        id="name"
+        placeholder="Participant Name"
+        name="name"
+      />
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-2">
+        Add Participant
+      </button>
+    </div>
+  </div>
+</form>
+
+<h3 style="text-align: center;">Participants in Pagathiya</h3>
 
 <table class="table table-responsive-lg">
   <caption>

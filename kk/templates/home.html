@@ -1,24 +1,32 @@
-{% extends "base.html" %} 
-
-{% block content%}
+{% extends "base.html" %} {% block content%}
 <!-- Masthead -->
 <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">    
+  <div class="carousel-inner">
     <div class="carousel-item active" data-interval="100">
-      <img src="../static/img/g1-min.JPG" class="d-block w-100" alt="...">
+      <img src="../static/img/g1-min.JPG" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item" data-interval="100">
-      <img src="../static/img/g2-min.JPG" class="d-block w-100" alt="...">
+      <img src="../static/img/g2-min.JPG" class="d-block w-100" alt="..." />
     </div>
     <div class="carousel-item" data-interval="100">
-      <img src="../static/img/g3-min.JPG" class="d-block w-100" alt="...">
+      <img src="../static/img/g3-min.JPG" class="d-block w-100" alt="..." />
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleInterval"
+    role="button"
+    data-slide="prev"
+  >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleInterval"
+    role="button"
+    data-slide="next"
+  >
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -44,7 +52,9 @@
           <div class="features-icons-icon d-flex">
             <i class="icon-layers m-auto text-primary"></i>
           </div>
-          <h3><a href="{{url_for('games')}}" style="color: black">Season 5</a></h3>
+          <h3>
+            <a href="{{url_for('games')}}" style="color: black">Season 5</a>
+          </h3>
           <p class="lead mb-0">Take a look at this years Games</p>
         </div>
       </div>
@@ -54,7 +64,9 @@
             <i class="icon-check m-auto text-primary"></i>
           </div>
           <h3>
-            <a href="#participate" style="color: black">26<sup>th</sup> Feb 2020</a>
+            <a href="#participate" style="color: black"
+              >26<sup>th</sup> Feb 2020</a
+            >
           </h3>
           <p class="lead mb-0">Metallurgy Garden , GECG</p>
           <p class="lead mb-0"></p>
@@ -64,37 +76,62 @@
   </div>
 </section>
 
-
-
-
 <!-- Testimonials -->
 <a id="whatpeoplesay"></a>
-<h1 align="center" style="padding-top: 8px; margin-top: 5px;">Faculties About Previous Seasons</h1>
+<h1 align="center" style="padding-top: 8px; margin-top: 5px;">
+  Faculties About Previous Seasons
+</h1>
 <div class="card-deck p-4">
   <div class="card">
-    <img src="../static/img/JSD_photo.jpeg" class="card-img-top" style="height: 400px;" alt="...">
+    <img
+      src="../static/img/JSD_photo.jpeg"
+      class="card-img-top"
+      style="height: 400px;"
+      alt="..."
+    />
     <div class="card-body">
       <h5 class="card-title text-center">Prof. J.S. Dhobi</h5>
-      <p class="card-text">"Had great fun at Khovayel Khel playing my childhood games with my colleagues.It was a Refreshing change from day to day routine. "</p>      
+      <p class="card-text">
+        "Had great fun at Khovayel Khel playing my childhood games with my
+        colleagues.It was a Refreshing change from day to day routine. "
+      </p>
     </div>
   </div>
   <div class="card">
-    <img src="../static/img/PRC_photo.jpeg" class="card-img-top" style="height: 400px;" alt="...">
+    <img
+      src="../static/img/PRC_photo.jpeg"
+      class="card-img-top"
+      style="height: 400px;"
+      alt="..."
+    />
     <div class="card-body">
-      <h5 class="card-title text-center">Prof. P.R Chaudhari </h5>
-      <p class="card-text">"Great initiative by Khovayel Khel team. I don't remember playing with such enthusiasm after my school days, but Khovayel Khel brought back that enthusiasm with the fun and little competitive games."</p>      
+      <h5 class="card-title text-center">Prof. P.R Chaudhari</h5>
+      <p class="card-text">
+        "Great initiative by Khovayel Khel team. I don't remember playing with
+        such enthusiasm after my school days, but Khovayel Khel brought back
+        that enthusiasm with the fun and little competitive games."
+      </p>
     </div>
   </div>
   <div class="card">
-    <img src="../static/img/UP_photo.jpg" class="card-img-top" style="height: 400px;" alt="...">
+    <img
+      src="../static/img/UP_photo.jpg"
+      class="card-img-top"
+      style="height: 400px;"
+      alt="..."
+    />
     <div class="card-body">
-      <h5 class="card-title text-center">Prof. Ujas Pandya </h5>
-      <p class="card-text">"Innovative idea of utilizing free time by playing fun old games with your friends. Motivating, Entertaining and Intriguing Evening well spent with friends is what Khovayel Khel is."</p>      
+      <h5 class="card-title text-center">Prof. Ujas Pandya</h5>
+      <p class="card-text">
+        "Innovative idea of utilizing free time by playing fun old games with
+        your friends. Motivating, Entertaining and Intriguing Evening well spent
+        with friends is what Khovayel Khel is."
+      </p>
     </div>
   </div>
 </div>
 
-<!-- Call to Action -->
+<!-- Call to Action 
 <section class="content-section", id="participate">      
   <form action="" method="POST">
     {{ form.hidden_tag() }}
@@ -149,12 +186,15 @@
     </fieldset>
   </form>
 </section>
+-->
 
-{% endblock content%}
+{% endblock content%} {% block script %}
 
-{% block script %}
 <script>
-function form_validate_enroll() {
+  document.body.onload(alert("Registraions Have Been Closed!!"));
+
+  /*
+  function form_validate_enroll() {
              var enroll = document.getElementById('s_enroll').value;             
             if (/[^a-zA-Z0-9\-\/]/.test(enroll)) {
                 alert("Special Characters are Not Allowed in Enrollment Number!");
@@ -165,7 +205,7 @@ function form_validate_enroll() {
                 return false;
             }            
         }
-
+*/
 </script>
 
 {% endblock script %}
